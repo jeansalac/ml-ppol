@@ -10,4 +10,4 @@ DATE SERVICE REQUEST WAS RECEIVED
 2015                                5314
 2016                                4435
 2017                                3666
-2018                                 829
+2018                                 837
