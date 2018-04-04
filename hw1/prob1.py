@@ -138,7 +138,7 @@ def main():
 	x, y = zip(*lists) # unpack a list of pairs into two tuples
 	plt.plot(x,y)
 	plt.xlabel("Months of 2017")
-	plt.ylabel("Number of Alley Lights Out Requests")
+	plt.ylabel("Number of Alley Lights Out Reported")
 	plt.show()
 
 	#Requests per neighborhood
@@ -200,6 +200,119 @@ def main():
 	plt.xlabel("Community Areas")
 	plt.ylabel("Number of Graffiti Removal Requests")
 	plt.show()
+
+	build_zip_lines = build_zip_file.readlines()
+	for x in range(1, len(build_zip_lines)):
+		lineParts = build_zip_lines[x].split(",")
+		zipCode = int(lineParts[0])
+		if zipCode in far_north:
+			build_zip_dict["Far North"] = build_zip_dict["Far North"]+int(lineParts[1].strip())
+
+		if zipCode in northwest:
+			build_zip_dict["Northwest"] = build_zip_dict["Northwest"]+int(lineParts[1].strip())
+		
+		if zipCode in north:
+			build_zip_dict["North"] = build_zip_dict["North"]+int(lineParts[1].strip())
+		
+		if zipCode in west:
+			build_zip_dict["West"] = build_zip_dict["West"]+int(lineParts[1].strip())
+		
+		if zipCode in central:
+			build_zip_dict["Central"] = build_zip_dict["Central"]+int(lineParts[1].strip())
+		
+		if zipCode in south:
+			build_zip_dict["South"] = build_zip_dict["South"]+int(lineParts[1].strip())
+
+		if zipCode in southwest:
+			build_zip_dict["Southwest"] = build_zip_dict["Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SW:
+			build_zip_dict["Far Southwest"] = build_zip_dict["Far Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SE:
+			build_zip_dict["Far Southeast"] = build_zip_dict["Far Southeast"]+int(lineParts[1].strip())
+
+	lists = sorted(build_zip_dict.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	print(x)
+	print(y)
+	plt.bar(x,y)
+	plt.xlabel("Community Areas")
+	plt.ylabel("Number of Vacant and Abandoned Buildings Reported")
+	plt.show()
+
+	alleys_zip_lines = alleys_zip_file.readlines()
+	for x in range(1, len(alleys_zip_lines)):
+		lineParts = alleys_zip_lines[x].split(",")
+		zipCode = int(lineParts[0])
+		if zipCode in far_north:
+			alleys_zip_dict["Far North"] = alleys_zip_dict["Far North"]+int(lineParts[1].strip())
+
+		if zipCode in northwest:
+			alleys_zip_dict["Northwest"] = alleys_zip_dict["Northwest"]+int(lineParts[1].strip())
+		
+		if zipCode in north:
+			alleys_zip_dict["North"] = alleys_zip_dict["North"]+int(lineParts[1].strip())
+		
+		if zipCode in west:
+			alleys_zip_dict["West"] = alleys_zip_dict["West"]+int(lineParts[1].strip())
+		
+		if zipCode in central:
+			alleys_zip_dict["Central"] = alleys_zip_dict["Central"]+int(lineParts[1].strip())
+		
+		if zipCode in south:
+			alleys_zip_dict["South"] = alleys_zip_dict["South"]+int(lineParts[1].strip())
+
+		if zipCode in southwest:
+			alleys_zip_dict["Southwest"] = alleys_zip_dict["Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SW:
+			alleys_zip_dict["Far Southwest"] = alleys_zip_dict["Far Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SE:
+			alleys_zip_dict["Far Southeast"] = alleys_zip_dict["Far Southeast"]+int(lineParts[1].strip())
+
+	lists = sorted(alleys_zip_dict.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	print(x)
+	print(y)
+	plt.bar(x,y)
+	plt.xlabel("Community Areas")
+	plt.ylabel("Number of Alley Lights Out Reported")
+	plt.show()
+
+	graf_resp_file = open("graf_resp.csv", "r")
+	graf_resp_dict = {}
+
+	graf_resp_lines = graf_resp_file.readlines()
+	for x in range(1, len(graf_resp_lines)):
+		lineParts = graf_resp_lines[x].split(",")
+		respParts = lineParts[0].split()
+		graf_resp_dict[int(respParts[0])] = int(lineParts[1].strip())
+	
+	lists = sorted(graf_resp_dict.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.plot(x,y)
+	plt.xlabel("Response Time (days)")
+	plt.ylabel("Graffiti Removal Requests")
+	plt.show()
+
+	alleys_resp_file = open("alleys_resp.csv", "r")
+	alleys_resp_dict = {}
+
+	alleys_resp_lines = alleys_resp_file.readlines()
+	for x in range(1, len(alleys_resp_lines)):
+		lineParts = alleys_resp_lines[x].split(",")
+		respParts = lineParts[0].split()
+		alleys_resp_dict[int(respParts[0])] = int(lineParts[1].strip())
+	
+	lists = sorted(alleys_resp_dict.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.plot(x,y)
+	plt.xlabel("Response Time (days)")
+	plt.ylabel("Number of Alley Lights Out Reported")
+	plt.show()
+
 
 
 
