@@ -32,7 +32,8 @@ def main():
 	deg16 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
 	pov15 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
 	pov16 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
-	#http://chicago-zone.blogspot.com/2014/03/chicago-zip-code-map-locate-chicago.html
+	
+	#From: http://chicago-zone.blogspot.com/2014/03/chicago-zip-code-map-locate-chicago.html
 	far_north = [60626,60645, 60659, 60660,60640,60625,60630,60631,60656]
 	northwest = [60618,60634, 60641,60607,60639]
 	north = [60618, 60613,60657, 60613,60614, 60610,60647]
@@ -92,11 +93,25 @@ def main():
 			deg15["Far Southeast"] = deg15["Far Southeast"]+int(data_15[i][2])
 			pov15["Far Southeast"] = pov15["Far Southeast"]+int(data_15[i][3])
 
-	# print(pop15)
-	# print(deg15)
-	# print(pov15)
-	plt.bar(pop15.keys(),pop15.values())
-	plt.xlabel('Neighborhood', fontsize=40)
+	lists = sorted(pop15.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community")
+	plt.ylabel("Total Population in 2015")
+	plt.show()
+
+	lists = sorted(deg15.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community")
+	plt.ylabel("Total Population of Adults with a Bachelor's Degree in 2015")
+	plt.show()
+
+	lists = sorted(pov15.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community")
+	plt.ylabel("Total Population in Poverty in 2015")
 	plt.show()
 
 		#Populate data for 2016
@@ -148,9 +163,26 @@ def main():
 			deg16["Far Southeast"] = deg16["Far Southeast"]+int(data_16[i][2])
 			pov16["Far Southeast"] = pov16["Far Southeast"]+int(data_16[i][3])
 	
-	# print(pop16)
-	# print(deg16)
-	# print(pov16)
+	lists = sorted(pop16.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community")
+	plt.ylabel("Total Population in 2016")
+	plt.show()
+
+	lists = sorted(deg16.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community")
+	plt.ylabel("Total Population of Adults with a Bachelor's Degree in 2016")
+	plt.show()
+
+	lists = sorted(pov16.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community")
+	plt.ylabel("Total Population in Poverty in 2016")
+	plt.show()
 
 	# first15 = "2015-01-01"
 	# last15 = "2015-12-31"
@@ -204,6 +236,169 @@ def main():
 	# alleys = alleys.loc[alleys_2016]
 
 	# (alleys['Type of Service Request'].groupby([alleys['ZIP Code']]).agg({'count'})).to_csv("alley_zip16.csv")
+
+	build_zip_file15 = open("build_zip15.csv")
+	build_zip_dict15 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
+	build_zip_file16 = open("build_zip16.csv")
+	build_zip_dict16 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
+
+	build_zip_lines15 = build_zip_file15.readlines()
+	for x in range(1, len(build_zip_lines15)):
+		lineParts = build_zip_lines15[x].split(",")
+		zipCode = int(lineParts[0])
+		if zipCode in far_north:
+			build_zip_dict15["Far North"] = build_zip_dict15["Far North"]+int(lineParts[1].strip())
+
+		if zipCode in northwest:
+			build_zip_dict15["Northwest"] = build_zip_dict15["Northwest"]+int(lineParts[1].strip())
+		
+		if zipCode in north:
+			build_zip_dict15["North"] = build_zip_dict15["North"]+int(lineParts[1].strip())
+		
+		if zipCode in west:
+			build_zip_dict15["West"] = build_zip_dict15["West"]+int(lineParts[1].strip())
+		
+		if zipCode in central:
+			build_zip_dict15["Central"] = build_zip_dict15["Central"]+int(lineParts[1].strip())
+		
+		if zipCode in south:
+			build_zip_dict15["South"] = build_zip_dict15["South"]+int(lineParts[1].strip())
+
+		if zipCode in southwest:
+			build_zip_dict15["Southwest"] = build_zip_dict15["Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SW:
+			build_zip_dict15["Far Southwest"] = build_zip_dict15["Far Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SE:
+			build_zip_dict15["Far Southeast"] = build_zip_dict15["Far Southeast"]+int(lineParts[1].strip())
+
+	lists = sorted(build_zip_dict15.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community Areas")
+	plt.ylabel("Number of Vacant and Abandoned Buildings Reported in 2015")
+	plt.show()
+
+	build_zip_lines16 = build_zip_file16.readlines()
+	for x in range(1, len(build_zip_lines16)):
+		lineParts = build_zip_lines16[x].split(",")
+		zipCode = int(lineParts[0])
+		if zipCode in far_north:
+			build_zip_dict16["Far North"] = build_zip_dict16["Far North"]+int(lineParts[1].strip())
+
+		if zipCode in northwest:
+			build_zip_dict16["Northwest"] = build_zip_dict16["Northwest"]+int(lineParts[1].strip())
+		
+		if zipCode in north:
+			build_zip_dict16["North"] = build_zip_dict16["North"]+int(lineParts[1].strip())
+		
+		if zipCode in west:
+			build_zip_dict16["West"] = build_zip_dict16["West"]+int(lineParts[1].strip())
+		
+		if zipCode in central:
+			build_zip_dict16["Central"] = build_zip_dict16["Central"]+int(lineParts[1].strip())
+		
+		if zipCode in south:
+			build_zip_dict16["South"] = build_zip_dict16["South"]+int(lineParts[1].strip())
+
+		if zipCode in southwest:
+			build_zip_dict16["Southwest"] = build_zip_dict16["Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SW:
+			build_zip_dict16["Far Southwest"] = build_zip_dict16["Far Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SE:
+			build_zip_dict16["Far Southeast"] = build_zip_dict16["Far Southeast"]+int(lineParts[1].strip())
+
+	lists = sorted(build_zip_dict16.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community Areas")
+	plt.ylabel("Number of Vacant and Abandoned Buildings Reported in 2016")
+	plt.show()
+
+	alleys_zip_file15 = open("alley_zip15.csv", "r")
+	alleys_zip_dict15 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
+	
+	alleys_zip_lines15 = alleys_zip_file15.readlines()
+	for x in range(1, len(alleys_zip_lines15)):
+		lineParts = alleys_zip_lines15[x].split(",")
+		zipCode = int(lineParts[0])
+		if zipCode in far_north:
+			alleys_zip_dict15["Far North"] = alleys_zip_dict15["Far North"]+int(lineParts[1].strip())
+
+		if zipCode in northwest:
+			alleys_zip_dict15["Northwest"] = alleys_zip_dict15["Northwest"]+int(lineParts[1].strip())
+		
+		if zipCode in north:
+			alleys_zip_dict15["North"] = alleys_zip_dict15["North"]+int(lineParts[1].strip())
+		
+		if zipCode in west:
+			alleys_zip_dict15["West"] = alleys_zip_dict15["West"]+int(lineParts[1].strip())
+		
+		if zipCode in central:
+			alleys_zip_dict15["Central"] = alleys_zip_dict15["Central"]+int(lineParts[1].strip())
+		
+		if zipCode in south:
+			alleys_zip_dict15["South"] = alleys_zip_dict15["South"]+int(lineParts[1].strip())
+
+		if zipCode in southwest:
+			alleys_zip_dict15["Southwest"] = alleys_zip_dict15["Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SW:
+			alleys_zip_dict15["Far Southwest"] = alleys_zip_dict15["Far Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SE:
+			alleys_zip_dict15["Far Southeast"] = alleys_zip_dict15["Far Southeast"]+int(lineParts[1].strip())
+
+	lists = sorted(alleys_zip_dict15.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community Areas")
+	plt.ylabel("Number of Alley Lights Out Reported in 2015")
+	plt.show()
+
+	alleys_zip_file16 = open("alley_zip16.csv", "r")
+	alleys_zip_dict16 = {"Far North":0,"Northwest":0,"North":0,"West":0,"Central":0,"South":0,"Southwest":0,"Far Southwest":0,"Far Southeast":0}
+	
+	alleys_zip_lines16 = alleys_zip_file16.readlines()
+	for x in range(1, len(alleys_zip_lines16)):
+		lineParts = alleys_zip_lines16[x].split(",")
+		zipCode = int(lineParts[0])
+		if zipCode in far_north:
+			alleys_zip_dict16["Far North"] = alleys_zip_dict16["Far North"]+int(lineParts[1].strip())
+
+		if zipCode in northwest:
+			alleys_zip_dict16["Northwest"] = alleys_zip_dict16["Northwest"]+int(lineParts[1].strip())
+		
+		if zipCode in north:
+			alleys_zip_dict16["North"] = alleys_zip_dict16["North"]+int(lineParts[1].strip())
+		
+		if zipCode in west:
+			alleys_zip_dict16["West"] = alleys_zip_dict16["West"]+int(lineParts[1].strip())
+		
+		if zipCode in central:
+			alleys_zip_dict16["Central"] = alleys_zip_dict16["Central"]+int(lineParts[1].strip())
+		
+		if zipCode in south:
+			alleys_zip_dict16["South"] = alleys_zip_dict16["South"]+int(lineParts[1].strip())
+
+		if zipCode in southwest:
+			alleys_zip_dict16["Southwest"] = alleys_zip_dict16["Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SW:
+			alleys_zip_dict16["Far Southwest"] = alleys_zip_dict16["Far Southwest"]+int(lineParts[1].strip())
+
+		if zipCode in far_SE:
+			alleys_zip_dict16["Far Southeast"] = alleys_zip_dict16["Far Southeast"]+int(lineParts[1].strip())
+
+	lists = sorted(alleys_zip_dict16.items())
+	x, y = zip(*lists) # unpack a list of pairs into two tuples
+	plt.bar(x,y)
+	plt.xlabel("Community Areas")
+	plt.ylabel("Number of Alley Lights Out Reported in 2016")
+	plt.show()
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.31)  3 APR 2018 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.31)  3 APR 2018 23:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,33 +277,145 @@ File: images/responseoveralleys.png Graphic file (type png)
 <use images/responseoveralleys.png>
 Package pdftex.def Info: images/responseoveralleys.png used on input line 64.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
+ [5 <./images/responseoveralleys.png>]
+<images/totalpop15.png, id=38, 902.6523pt x 401.8212pt>
+File: images/totalpop15.png Graphic file (type png)
+
+<use images/totalpop15.png>
+Package pdftex.def Info: images/totalpop15.png used on input line 78.
+(pdftex.def)             Requested size: 541.59557pt x 241.09457pt.
+
+<images/totalpop16.png, id=39, 912.0474pt x 398.2077pt>
+File: images/totalpop16.png Graphic file (type png)
+
+<use images/totalpop16.png>
+Package pdftex.def Info: images/totalpop16.png used on input line 81.
+(pdftex.def)             Requested size: 547.23267pt x 238.92645pt.
+
+Overfull \hbox (5.20766pt too wide) in paragraph at lines 80--82
+[] 
+ []
+
+[6 <./images/totalpop15.png> <./images/totalpop16.png>]
+<images/totaldeg15.png, id=45, 966.2499pt x 397.485pt>
+File: images/totaldeg15.png Graphic file (type png)
+
+<use images/totaldeg15.png>
+Package pdftex.def Info: images/totaldeg15.png used on input line 86.
+(pdftex.def)             Requested size: 579.75441pt x 238.49283pt.
+
+Overfull \hbox (37.7294pt too wide) in paragraph at lines 85--87
+[] 
+ []
+
+<images/totaldeg16.png, id=46, 904.8204pt x 394.5942pt>
+File: images/totaldeg16.png Graphic file (type png)
+
+<use images/totaldeg16.png>
+Package pdftex.def Info: images/totaldeg16.png used on input line 89.
+(pdftex.def)             Requested size: 542.89644pt x 236.75833pt.
+
+Overfull \hbox (0.87143pt too wide) in paragraph at lines 88--90
+[] 
+ []
+
+[7 <./images/totaldeg15.png> <./images/totaldeg16.png>]
+<images/totalpov15.png, id=53, 941.6781pt x 397.485pt>
+File: images/totalpov15.png Graphic file (type png)
+
+<use images/totalpov15.png>
+Package pdftex.def Info: images/totalpov15.png used on input line 93.
+(pdftex.def)             Requested size: 565.01122pt x 238.49283pt.
+
+Overfull \hbox (22.9862pt too wide) in paragraph at lines 92--94
+[] 
+ []
+
+<images/totalpov16.png, id=54, 925.7787pt x 398.9304pt>
+File: images/totalpov16.png Graphic file (type png)
+
+<use images/totalpov16.png>
+Package pdftex.def Info: images/totalpov16.png used on input line 96.
+(pdftex.def)             Requested size: 555.47151pt x 239.36008pt.
+
+Overfull \hbox (13.4465pt too wide) in paragraph at lines 95--97
+[] 
+ []
+
+[8 <./images/totalpov15.png> <./images/totalpov16.png>]
+<images/build15.png, id=60, 906.2658pt x 401.0985pt>
+File: images/build15.png Graphic file (type png)
+ <use images/build15.png>
+Package pdftex.def Info: images/build15.png used on input line 100.
+(pdftex.def)             Requested size: 543.76367pt x 240.66095pt.
+
+<images/build16.png, id=61, 942.4008pt x 399.6531pt>
+File: images/build16.png Graphic file (type png)
+ <use images/build16.png>
+Package pdftex.def Info: images/build16.png used on input line 102.
+(pdftex.def)             Requested size: 565.44484pt x 239.7937pt.
+
+Overfull \hbox (1.73866pt too wide) in paragraph at lines 99--103
+[]
+ []
+
+
+Overfull \hbox (23.41983pt too wide) in paragraph at lines 99--103
+[] 
+ []
+
+[9 <./images/build15.png> <./images/build16.png>]
+<images/alleys15.png, id=67, 959.0229pt x 400.3758pt>
+File: images/alleys15.png Graphic file (type png)
+
+<use images/alleys15.png>
+Package pdftex.def Info: images/alleys15.png used on input line 105.
+(pdftex.def)             Requested size: 575.41818pt x 240.22731pt.
+
+<images/alleys16.png, id=68, 1058.0328pt x 401.0985pt>
+File: images/alleys16.png Graphic file (type png)
+
+<use images/alleys16.png>
+Package pdftex.def Info: images/alleys16.png used on input line 107.
+(pdftex.def)             Requested size: 581.91985pt x 220.60484pt.
+
+Overfull \hbox (33.39317pt too wide) in paragraph at lines 104--108
+[]
+ []
+
+
+Overfull \hbox (39.89484pt too wide) in paragraph at lines 104--108
+[] 
+ []
+
+[10 <./images/alleys15.png> <./images/alleys16.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 121.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
- [5 <./images/responseoveralleys.png>] [6] (./writeup.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 121.
+ [11] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 2309 strings out of 493029
- 34495 string characters out of 6136234
- 102576 words of memory out of 5000000
- 5830 multiletter control sequences out of 15000+600000
+ 2359 strings out of 493029
+ 35615 string characters out of 6136234
+ 103576 words of memory out of 5000000
+ 5870 multiletter control sequences out of 15000+600000
  8501 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,32p,332b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb>
-Output written on writeup.pdf (6 pages, 273270 bytes).
+ 37i,6n,32p,413b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on writeup.pdf (11 pages, 630978 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

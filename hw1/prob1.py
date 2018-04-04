@@ -102,8 +102,6 @@ def main():
 	
 	lists = sorted(graf_time_dict.items())
 	x, y = zip(*lists) # unpack a list of pairs into two tuples
-	print(x)
-	print(y)
 	plt.plot(x,y)
 	plt.xlabel("Months of 2017")
 	plt.ylabel("Number of Graffiti Removal Requests")
