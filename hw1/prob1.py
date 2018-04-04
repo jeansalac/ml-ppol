@@ -4,6 +4,13 @@ import numpy as np
 import json
 import requests
 
+# def csv_to_dict(csvFile, data_dict):
+# 	file = open(csvFile, "r")
+# 	lines = file.readlines()
+# 	for i in range(1, len(lines)):
+		
+
+
 
 def main():
 	first = "2017-01-01"
