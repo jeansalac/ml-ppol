@@ -1,0 +1,55 @@
+\title{Homework 1: Diagnostic}
+
+\author{Jean Salac (salac@uchicago.edu)}
+
+\documentclass[letterpaper,12pt]{article}
+\usepackage[letterpaper, portrait, margin = 0.5 in]{geometry}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{enumitem}
+
+\begin{document}
+\maketitle
+\begin{center}
+GitHub Repo: https://github.com/jeansalac/ml-ppol \\
+Collaborator: Yuliana Zamora
+\end{center}
+
+\section{Data Acquisition and Analysis}
+
+\section{Data Augmentation and APIs}
+
+\section{Probability}
+\begin{itemize}
+\item Zip code for 3600 W Roosevelt Ave: 60624
+\item Zip codes for Uptown: 60613 and 60640
+\item The values came from the number of requests for the zip code 60624 over all the years.
+\end{itemize}
+
+\begin{enumerate}[label = \Alph*]
+\item \textbf{Probabilities of Requests}
+\begin{itemize}
+\item Number of Graffiti Removal Requests (G) = 3274
+\item Number of Vacant and Abandoned Buildings Requests (B) = 3069
+\item Number of Lights Out in Alleys Requests (L)= 3244
+\item Total Number of Requests = 9587
+\item $P(G) = \frac{3274}{9587} \times 100 = 34.15\%$
+\item $P(B) = \frac{3069}{9587} \times 100 = 32.01\%$
+\item $P(L) = \frac{3244}{9587} \times 100 = 33.84\%$
+\item Thus, graffiti removal is the most likely request from Garfield Park.
+\end{itemize}
+
+\item \textbf{Garfield vs Uptown - with raw data}
+\begin{itemize}
+\item Number of Graffiti Removal Requests from Garfield Park (GP) = 3274
+\item Number of Graffiti Removal Requests from Uptown (U)= 19182+17653=36835
+\item Total number of Graffiti Removal Requests = 40109
+\item $P(GP) = \frac{3274}{40109} = 8.16 \%$
+\item $P(U) = \frac{36835}{40109} = 98.14 \%$
+\end{itemize}
+
+\item \textbf{Garfield vs Uptown - without raw data}
+\end{enumerate}
+
+
+\end{document}

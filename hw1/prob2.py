@@ -92,9 +92,9 @@ def main():
 			deg15["Far Southeast"] = deg15["Far Southeast"]+int(data_15[i][2])
 			pov15["Far Southeast"] = pov15["Far Southeast"]+int(data_15[i][3])
 
-	print(pop15)
-	print(deg15)
-	print(pov15)
+	# print(pop15)
+	# print(deg15)
+	# print(pov15)
 	# plt.bar(pop15.keys(),pop15.values())
 	# plt.show()
 
@@ -147,9 +147,9 @@ def main():
 			deg16["Far Southeast"] = deg16["Far Southeast"]+int(data_16[i][2])
 			pov16["Far Southeast"] = pov16["Far Southeast"]+int(data_16[i][3])
 	
-	print(pop16)
-	print(deg16)
-	print(pov16)
+	# print(pop16)
+	# print(deg16)
+	# print(pov16)
 
 	first15 = "2015-01-01"
 	last15 = "2015-12-31"
@@ -157,52 +157,52 @@ def main():
 	last16 = "2016-12-31"
 
 	#Vacated and Abandomed Buildings for 2015
-	build_zip15 = open("build_zip15.txt", "w+")
+	build_zip15 = open("build_zip15.csv", "w+")
 
 	buildings = pd.read_csv("~/Documents/buildings.csv",dtype = object)
 	buildings["DATE SERVICE REQUEST WAS RECEIVED"]=pd.to_datetime(buildings["DATE SERVICE REQUEST WAS RECEIVED"])
 	build_2015 = (buildings["DATE SERVICE REQUEST WAS RECEIVED"]>=first15)&(buildings["DATE SERVICE REQUEST WAS RECEIVED"]<=last15)
 	buildings = buildings.loc[build_2015]
 
-	print>>build_zip15, buildings['SERVICE REQUEST TYPE'].groupby([buildings['ZIP CODE']]).agg({'count'})
+	(buildings['SERVICE REQUEST TYPE'].groupby([buildings['ZIP CODE']]).agg({'count'})).to_csv("build_zip15.csv")
 
 	#Reset dataframe
 	buildings = pd.DataFrame(buildings).reset_index()
 	buildings.to_csv("buildings.csv")
 
 	#Vacated and Abandomed Buildings for 2016
-	build_zip16 = open("build_zip16.txt", "w+")
+	build_zip16 = open("build_zip16.csv", "w+")
 
 	buildings = pd.read_csv("~/Documents/buildings.csv",dtype = object)
 	buildings["DATE SERVICE REQUEST WAS RECEIVED"]=pd.to_datetime(buildings["DATE SERVICE REQUEST WAS RECEIVED"])
 	build_2016 = (buildings["DATE SERVICE REQUEST WAS RECEIVED"]>=first15)&(buildings["DATE SERVICE REQUEST WAS RECEIVED"]<=last16)
 	buildings = buildings.loc[build_2016]
 
-	print>>build_zip16, buildings['SERVICE REQUEST TYPE'].groupby([buildings['ZIP CODE']]).agg({'count'})
+	(buildings['SERVICE REQUEST TYPE'].groupby([buildings['ZIP CODE']]).agg({'count'})).to_csv("build_zip16.csv")
 
 	#Reset dataframe
 	buildings = pd.DataFrame(buildings).reset_index()
 	buildings.to_csv("buildings.csv")
 
 	#Lights Out in Alleys for 2015
-	alleys_zip15 = open("alleys_zip15.txt", "w+")
+	alleys_zip15 = open("alleys_zip15.csv", "w+")
 
 	alleys = pd.read_csv("~/Documents/alleys.csv", dtype = object)
 	alleys["Creation Date"] = pd.to_datetime(alleys["Creation Date"])
 	alleys_2015 = (alleys["Creation Date"]>=first15)&(alleys["Creation Date"]<=last15)
 	alleys = alleys.loc[alleys_2015]
 
-	print>>alleys_zip15, alleys['Type of Service Request'].groupby([alleys['ZIP Code']]).agg({'count'})
+	(alleys['Type of Service Request'].groupby([alleys['ZIP Code']]).agg({'count'})).to_csv("alley_zip15.csv")
 
 	#Lights Out in Alleys for 2016
-	alleys_zip16 = open("alleys_zip16.txt", "w+")
+	alleys_zip16 = open("alleys_zip16.csv", "w+")
 
 	alleys = pd.read_csv("~/Documents/alleys.csv", dtype = object)
 	alleys["Creation Date"] = pd.to_datetime(alleys["Creation Date"])
 	alleys_2016 = (alleys["Creation Date"]>=first16)&(alleys["Creation Date"]<=last16)
 	alleys = alleys.loc[alleys_2016]
 
-	print>>alleys_zip16, alleys['Type of Service Request'].groupby([alleys['ZIP Code']]).agg({'count'})
+	(alleys['Type of Service Request'].groupby([alleys['ZIP Code']]).agg({'count'})).to_csv("alley_zip16.csv")
 
 
 
