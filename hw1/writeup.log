@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.31)  3 APR 2018 21:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.31)  3 APR 2018 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -199,41 +199,111 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 12.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 21.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
+<images/grafovertime.png, id=1, 462.528pt x 346.896pt>
+File: images/grafovertime.png Graphic file (type png)
+
+<use images/grafovertime.png>
+Package pdftex.def Info: images/grafovertime.png used on input line 37.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+<images/buildovertime.png, id=3, 462.528pt x 346.896pt>
+File: images/buildovertime.png Graphic file (type png)
+
+<use images/buildovertime.png>
+Package pdftex.def Info: images/buildovertime.png used on input line 40.
+(pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/grafovertime.png>
+]
+<images/alleysovertime.png, id=13, 462.528pt x 346.896pt>
+File: images/alleysovertime.png Graphic file (type png)
+
+<use images/alleysovertime.png>
+Package pdftex.def Info: images/alleysovertime.png used on input line 43.
+(pdftex.def)             Requested size: 416.27133pt x 312.2035pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+
+ []
+
+[2 <./images/buildovertime.png> <./images/alleysovertime.png>]
+<images/grafovercommunity.png, id=19, 1162.8243pt x 656.9343pt>
+File: images/grafovercommunity.png Graphic file (type png)
+
+<use images/grafovercommunity.png>
+Package pdftex.def Info: images/grafovercommunity.png used on input line 48.
+(pdftex.def)             Requested size: 534.90567pt x 302.19344pt.
+
+<images/buildovercommunity.png, id=20, 895.4253pt x 519.6213pt>
+File: images/buildovercommunity.png Graphic file (type png)
+
+<use images/buildovercommunity.png>
+Package pdftex.def Info: images/buildovercommunity.png used on input line 51.
+(pdftex.def)             Requested size: 537.25932pt x 311.77518pt.
+ [3 <./images/grafovercommunity.png> <./images/buildovercommunity.png>]
+<images/alleysovercommunity.png, id=26, 910.602pt x 402.5439pt>
+File: images/alleysovercommunity.png Graphic file (type png)
+
+<use images/alleysovercommunity.png>
+Package pdftex.def Info: images/alleysovercommunity.png used on input line 56.
+(pdftex.def)             Requested size: 546.36542pt x 241.5282pt.
+
+Overfull \hbox (4.34041pt too wide) in paragraph at lines 55--57
+[] 
+ []
+
+<images/responseovergraf.png, id=27, 462.528pt x 346.896pt>
+File: images/responseovergraf.png Graphic file (type png)
+
+<use images/responseovergraf.png>
+Package pdftex.def Info: images/responseovergraf.png used on input line 59.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+ [4 <./images/alleysovercommunity.png> <./images/responseovergraf.png>]
+<images/responseoveralleys.png, id=33, 462.528pt x 346.896pt>
+File: images/responseoveralleys.png Graphic file (type png)
+
+<use images/responseoveralleys.png>
+Package pdftex.def Info: images/responseoveralleys.png used on input line 64.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./writeup.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
+ [5 <./images/responseoveralleys.png>] [6] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 2267 strings out of 493029
- 33313 string characters out of 6136234
- 103576 words of memory out of 5000000
- 5798 multiletter control sequences out of 15000+600000
+ 2309 strings out of 493029
+ 34495 string characters out of 6136234
+ 102576 words of memory out of 5000000
+ 5830 multiletter control sequences out of 15000+600000
  8501 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,32p,243b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on writeup.pdf (2 pages, 76182 bytes).
+ 37i,6n,32p,332b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb>
+Output written on writeup.pdf (6 pages, 273270 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
