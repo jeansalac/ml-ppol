@@ -117,8 +117,6 @@ def main():
 	
 	lists = sorted(build_time_dict.items())
 	x, y = zip(*lists) # unpack a list of pairs into two tuples
-	print(x)
-	print(y)
 	plt.plot(x,y)
 	plt.xlabel("Months of 2017")
 	plt.ylabel("Number of Vacant and Abandoned Buildings Reported")
@@ -192,8 +190,6 @@ def main():
 
 	lists = sorted(graf_zip_dict.items())
 	x, y = zip(*lists) # unpack a list of pairs into two tuples
-	print(x)
-	print(y)
 	plt.bar(x,y)
 	plt.xlabel("Community Areas")
 	plt.ylabel("Number of Graffiti Removal Requests")
@@ -232,8 +228,6 @@ def main():
 
 	lists = sorted(build_zip_dict.items())
 	x, y = zip(*lists) # unpack a list of pairs into two tuples
-	print(x)
-	print(y)
 	plt.bar(x,y)
 	plt.xlabel("Community Areas")
 	plt.ylabel("Number of Vacant and Abandoned Buildings Reported")
@@ -272,8 +266,6 @@ def main():
 
 	lists = sorted(alleys_zip_dict.items())
 	x, y = zip(*lists) # unpack a list of pairs into two tuples
-	print(x)
-	print(y)
 	plt.bar(x,y)
 	plt.xlabel("Community Areas")
 	plt.ylabel("Number of Alley Lights Out Reported")
