@@ -42,3 +42,15 @@ def findLowOutliers(dataFrame, var):
 
 def findHighOutliers(dataFrame, var):
 	df_scaled = StandardScaler().fit_transform(dataFrame[var][:,np.newaxis])
+	high_range= df_scaled[df_scaled[:,0].argsort()][-10:]
+	return high_range
+
+#Find bivariate outliers for var X and var Y
+def findBivariateOutliers(dataFrame,varX,varY):
+	data = pd.concat([dataFrame[varX], dataFrame[varY]], axis=1)
+	data.plot.scatter(x=varX, y=varY, ylim=(0,80000))
+	return plt.show()
+
+#Fill in missing values with var
+def fillMissingVals(dataFrame, var):
+	dataFrame.fillna(var)
