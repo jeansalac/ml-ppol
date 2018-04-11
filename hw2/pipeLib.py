@@ -53,4 +53,12 @@ def findBivariateOutliers(dataFrame,varX,varY):
 
 #Fill in missing values with var
 def fillMissingVals(dataFrame, var):
-	dataFrame.fillna(var)
+	return dataFrame.fillna(var)
+
+#Discretize continuous variables
+def discretize(dataFrame, var, num):
+	return pd.cut(dataFrame[var],num,retbins=True)
+
+#Create dummy variables from categorical variables
+def createDummy(dataFrame, var):
+	return pd.get_dummies(dataFrame[var])

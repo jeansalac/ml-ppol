@@ -20,7 +20,10 @@ def main():
 	# print(findLowOutliers(credit_df, "SeriousDlqin2yrs"))
 	# print(findHighOutliers(credit_df, "SeriousDlqin2yrs"))
 	# findBivariateOutliers(credit_df, "age", "zipcode")
-	fillMissingVals(credit_df, credit_df.median())
+	#print(credit_df)
+	#print(fillMissingVals(credit_df, credit_df.median()))
+	#print(discretize(credit_df, 'age', 5))
+	print(createDummy(credit_df, 'MonthlyIncome'))
 
 
 if __name__ == '__main__':
