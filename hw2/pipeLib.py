@@ -52,14 +52,15 @@ def findHighOutliers(dataFrame, var):
 	return high_range
 
 #Find bivariate outliers for var X and var Y
-def findBivariateOutliers(dataFrame,varX,varY):
+def findBivariateOutliers(dataFrame,varX,varY,maxY):
 	data = pd.concat([dataFrame[varX], dataFrame[varY]], axis=1)
-	data.plot.scatter(x=varX, y=varY, ylim=(0,80000))
+	data.plot.scatter(x=varX, y=varY, ylim=(0,maxY))
 	return plt.show()
 
-#Fill in missing values with var
-def fillMissingVals(dataFrame, var):
-	return dataFrame.fillna(var)
+#Fill in missing values with newVal
+def fillMissing(dataFrame, var, newVal):
+	return dataFrame[var].fillna(newVal)
+
 
 #Discretize continuous variables
 def discretize(dataFrame, var, num):
