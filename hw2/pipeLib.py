@@ -7,6 +7,12 @@ from sklearn.preprocessing import StandardScaler
 from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
+import statsmodels.api as sm
+from patsy import dmatrices
+from sklearn.linear_model import LogisticRegression
+from sklearn.cross_validation import train_test_split
+from sklearn import metrics
+from sklearn.cross_validation import cross_val_score
 
 #Read in CSV 
 def readCSV(fileName):
@@ -62,3 +68,21 @@ def discretize(dataFrame, var, num):
 #Create dummy variables from categorical variables
 def createDummy(dataFrame, var):
 	return pd.get_dummies(dataFrame[var])
+
+#Prepare data for logistic regression
+def logReg(dataFrame, IV, listOfDVs):
+	if '-' in listOfDVs[0]:
+		formula = IV + "~"+'Q("'+listOfDVs[0]+'")'
+	else:
+		formula = IV + "~"+listOfDVs[0]
+	for i in range(1, len(listOfDVs)):
+		if '-' in listOfDVs[i]:
+			formula = formula + "+"+'Q("'+listOfDVs[i]+'")'
+		else:
+			formula = formula + "+"+ listOfDVs[i]
+	y, X = dmatrices(formula,dataFrame, return_type="dataframe")
+	y = np.ravel(y)
+	model = LogisticRegression()
+	model = model.fit(X, y)
+	print(pd.DataFrame(zip(X.columns, np.transpose(model.coef_))))
+	return model.score(X,y)
