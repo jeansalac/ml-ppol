@@ -23,7 +23,7 @@ def main():
 	#Data Summary
 	print(dataSummary(credit_df, 'age'))
 
-	#Give the distribution of the age variable
+	#Give the distribution of the variable
 	varDist(credit_df, 'age')
 
 	#Create a heatmap for the correlations among variables in credit_df
@@ -34,8 +34,8 @@ def main():
 	plotCorr(credit_df,varList)
 
 	#Finding outliers
-	print(findLowOutliers(credit_df, "SeriousDlqin2yrs"))
-	print(findHighOutliers(credit_df, "SeriousDlqin2yrs"))
+	print(findLowOutliers(credit_df, "DebtRatio", 3))
+	print(findHighOutliers(credit_df, "DebtRatio", 10))
 	findBivariateOutliers(credit_df, "age", "NumberOfDependents", 10)
 
 	#Fill in Continuous Variables

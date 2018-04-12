@@ -25,6 +25,7 @@ def dataSummary(dataFrame, var):
 #Provide variable distribution
 def varDist(dataFrame,var):
 	sns.distplot(dataFrame[var])
+	plt.title("Distribution of "+var)
 	return plt.show()
 
 #Provide summary of correlations through heatmap
@@ -32,6 +33,7 @@ def corrSummary(dataFrame):
 	corrmat = dataFrame.corr()
 	f, ax = plt.subplots(figsize=(12, 9))
 	sns.heatmap(corrmat, vmax=.8, square=True)
+	plt.title("Summary of Correlations between Variables in Data Frame")
 	return plt.show()
 
 #Provide scatter plot b/w desired variables in list
@@ -41,20 +43,21 @@ def plotCorr(dataFrame, list):
 	return plt.show()
 
 #Find univariate outliers for var 
-def findLowOutliers(dataFrame, var):
+def findLowOutliers(dataFrame, var,num):
 	df_scaled = StandardScaler().fit_transform(dataFrame[var][:,np.newaxis])
-	low_range = df_scaled[df_scaled[:,0].argsort()][:10]
+	low_range = df_scaled[df_scaled[:,0].argsort()][:num]
 	return low_range
 
-def findHighOutliers(dataFrame, var):
+def findHighOutliers(dataFrame, var,num):
 	df_scaled = StandardScaler().fit_transform(dataFrame[var][:,np.newaxis])
-	high_range= df_scaled[df_scaled[:,0].argsort()][-10:]
+	high_range= df_scaled[df_scaled[:,0].argsort()][-num:]
 	return high_range
 
 #Find bivariate outliers for var X and var Y
 def findBivariateOutliers(dataFrame,varX,varY,maxY):
 	data = pd.concat([dataFrame[varX], dataFrame[varY]], axis=1)
 	data.plot.scatter(x=varX, y=varY, ylim=(0,maxY))
+	plt.title("Correlation of "+ varX+ " and "+varY)
 	return plt.show()
 
 #Fill in missing values with newVal
@@ -86,4 +89,5 @@ def logReg(dataFrame, IV, listOfDVs):
 	model = LogisticRegression()
 	model = model.fit(X, y)
 	print(pd.DataFrame(zip(X.columns, np.transpose(model.coef_))))
+	print(y.mean())
 	return model.score(X,y)
