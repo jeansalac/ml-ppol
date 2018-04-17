@@ -113,6 +113,6 @@ NumberOfDependents & [0.011227895523920409] \\
 
 
 \item \textbf{Evaluate Classifier:} \\
-If we evaluate this classifier on accuracy with the original data, then an $83.4\%$ accuracy is reasonably good. At the very least, it does better than random, which results in a $16.7\%$ accuracy. However, since we are only evaluating this model on the same data it trained on, this could be a case of overfitting. We do not know how this model will behave with new data points.
+If we evaluate this classifier on accuracy with the original data, then an $83.4\%$ accuracy is reasonably good. At the very least, it does better than random, which results in a $16.7\%$ accuracy. However, since we are only evaluating this model on the same data it trained on, this could be a case of overfitting. We do not know how this model will behave with new data points. Additionally, accuracy weighs all errors equally, which means that false positives and false negatives have the same importance. This may not be the case with our data. For example, it may be better to have a false positive that someone is at risk of a serious delinquency within 2 years and intervene, rather than a false negative that someone is not at risk and not intervene. Furthermore, accuracy is a poor metric when the dataset is skewed. The credit data we have is skewed towards the negatives, so our $83.4 \%$ accuracy is misleading. 
 \end{enumerate}
 \end{document}
